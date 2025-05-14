@@ -1,5 +1,5 @@
 const {sequelize} = require('../db');
-const { Sequelize, DataTypes } = require('sequelize');
+const { Sequelize, DataTypes, Model } = require('sequelize');
 
 class Restaurant extends Model {};
 
@@ -9,7 +9,7 @@ Restaurant.init({
     cuisine: DataTypes.STRING,
 }, {
     sequelize: sequelize,
-    modelName: "Restuarant",
+    modelName: "Restaurant",
 })
 
 module.exports = {Restaurant};
